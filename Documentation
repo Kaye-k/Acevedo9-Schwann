@@ -1,0 +1,7 @@
+1.Project Title
+Colorful Spiral
+  2.What is the purpose of you project? Tell above your project
+    The purpose of my project is to create a colorful spiral in python to learn graphics programming and explore artistic expression through code
+  3.How your program works? Explain how to run your program
+  
+  3.This python program uses the turtle and colorsys libraries to draw a colorful spiral. it initializes a turtle and screen, then iterates through 360 degrees, calculating an HSV color for each step and converting it to RGB for the turtle to use while drawing a series of circle and turning. To run it, save the code as a .py file (e.g., spiral.py) and execute it from your termail using python spiral.py. You'll need to have the colorsys library installed; if not use pip install colorsys
