@@ -1,0 +1,24 @@
+import turtle
+import colorsys
+
+# Setup turtle and screen
+t = turtle.Turtle()
+s = turtle.Screen().bgcolor('White')
+t.speed(0)
+
+# Initialize color variables
+n = 70
+h = 0
+
+# Draw the spiral with changing colors
+for i in range(360):
+    c = colorsys.hsv_to_rgb(h, 1, 0.8)  # Convert hue to RGB
+    h += 1 / n  # Increment hue for color change
+    t.color(c)  # Set turtle color
+    t.left(1)  # Turn left for spiral
+    t.fd(1)  # Move forward
+    for j in range(2):
+        t.left(2)  # Slight turn before each circle
+        t.circle(100)  # Draw circle
+
+turtle.done()  # Finish drawing
