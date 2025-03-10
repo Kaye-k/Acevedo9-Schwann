@@ -1,0 +1,44 @@
+import random
+
+# List of flashcards as tuples (question, answer)
+flashcards = [
+    ("What is the capital of France?", "Paris"),
+    ("What is 2 + 2?", "4"),
+    ("Who wrote '1984'?", "George Orwell"),
+    ("What is the largest planet in our solar system?", "Jupiter"),
+    ("What is the symbol for water?", "H2O"),
+    ("What is the capital of Japan?", "Tokyo"),
+    ("What is the square root of 64?", "8"),
+    ("Who painted the Mona Lisa?", "Leonardo da Vinci")
+]
+
+def show_flashcard(flashcard):
+    """Show the flashcard question and get the user's answer."""
+    question, correct_answer = flashcard
+    print(f"Question: {question}")
+    user_answer = input("Your answer: ").strip()
+    
+    # Check if the user's answer is correct
+    if user_answer.lower() == correct_answer.lower():
+        print("Correct!\n")
+    else:
+        print(f"Incorrect! The correct answer is: {correct_answer}\n")
+
+def flashcard_app():
+    """Main function to run the flashcard app."""
+    print("Welcome to the Flashcard App!\n")
+    
+    while True:
+        # Pick a random flashcard from the list
+        flashcard = random.choice(flashcards)
+        show_flashcard(flashcard)
+        
+        # Ask the user if they want to continue or quit
+        user_input = input("Do you want to continue? (y/n): ").strip().lower()
+        if user_input != 'y':
+            print("Goodbye!")
+            break
+
+# Run the flashcard app
+if __name__ == "__main__":
+    flashcard_app()
